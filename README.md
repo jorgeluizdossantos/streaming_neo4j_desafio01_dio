@@ -87,7 +87,7 @@ MATCH (d:Director)-[:DIRECTED]->(c) RETURN d.name, labels(c)[0] AS tipo, c.title
 
 ## Queries de Negócio e Evidências Visuais
 
-- Perguntas de negócio respondidas:
+- Perguntas de negócio que podem ser respondidas pelo modelo:
   - Quais os top títulos por gênero com melhor média de rating?
   - Que títulos recomendar para um usuário com base nos seus gêneros preferidos?
   - Quais co-atores contracenaram com um determinado ator?
@@ -101,16 +101,6 @@ MATCH (d:Director)-[:DIRECTED]->(c) RETURN d.name, labels(c)[0] AS tipo, c.title
 
 - Arquivo com as consultas: [queries_negocio.cypher](file:///d:/01%20-%20Cursos/02%20-%20DIO/15%20-%20BOOTCAMP%20NEO4J/01%20-%20Desafios/desafio_01/queries_negocio.cypher)
 
-- Evidências visuais (como gerar os “prints”):
-  - Neo4j Browser
-    - Execute a consulta.
-    - Clique em “Graph” na aba de resultado, ajuste o layout e cores se desejar.
-    - Use o botão de câmera para exportar PNG.
-  - Neo4j Bloom
-    - Crie uma Perspective simples (labels e rels padrões).
-    - Rode frases como “Movies in Genre Drama with Actors” e exporte a imagem.
-  - Explore
-    - Carregue o resultado e use o exportador de imagem.
 
 ### Evidência — Elite Squad (conecta com “filmes brasileiros, elencos e diretores” e “gêneros por ator”)
 
@@ -190,5 +180,12 @@ Observação: os arquivos JSON seguem a estrutura de nós e relacionamentos do A
 
 ## Estrutura do repositório
 - `visualisation.png` — Visualização do modelo de grafo.
+- `filmes_brasil.png` — Cluster cinema brasileiro.
 - `desafio_01.cypher` — Script de constraints e carga de dados (internacionais e brasileiros).
+- arquivos json que podem ser importados no arrows.app:
+  - `arrows_model_overview.json` — Modelo conceitual.
+  - `arrows_brazil_films.json` — Cluster cinema brasileiro.
+  - `arrows_user_U1_watchlist.json` — Watchlist do usuário U1.
+  - `arrows_actor_wagner_moura.json` — Foco no ator Wagner Moura.
+  - `arrows_genre_drama_highlights.json` — Destaques do gênero Drama.
 - `README.md` — Este guia.
