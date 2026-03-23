@@ -133,6 +133,22 @@ OPTIONAL MATCH (m)<-[:DIRECTED]-(d:Director)
 RETURN m.title AS movie, collect(DISTINCT a.name) AS cast, collect(DISTINCT d.name) AS directors;
 ```
 
+### Evidência — Cluster Cinema Brasileiro (associado a arrows_brazil_films.json)
+
+Como reproduzir:
+- Importe o arquivo [arrows_brazil_films.json](file:///d:/01%20-%20Cursos/02%20-%20DIO/15%20-%20BOOTCAMP%20NEO4J/01%20-%20Desafios/desafio_01/arrows_brazil_films.json) no Arrows.app e exporte o PNG.
+- Ou gere via Cypher:
+
+```cypher
+// Subgrafo de filmes brasileiros, seus gêneros, elencos e diretores
+MATCH (m:Movie)
+WHERE m.title IN ['City of God','Elite Squad','Central Station','Bacurau','The Second Mother','Carandiru','A Dog''s Will']
+OPTIONAL MATCH (m)-[:IN_GENRE]->(g:Genre)
+OPTIONAL MATCH (a:Actor)-[:ACTED_IN]->(m)
+OPTIONAL MATCH (d:Director)-[:DIRECTED]->(m)
+RETURN m, g, a, d;
+```
+
 - Diagramas prontos para Arrows.app (importar via “Open → Import JSON”):
   - Modelo conceitual: [arrows_model_overview.json](file:///d:/01%20-%20Cursos/02%20-%20DIO/15%20-%20BOOTCAMP%20NEO4J/01%20-%20Desafios/desafio_01/arrows_model_overview.json)
   - Cluster cinema brasileiro: [arrows_brazil_films.json](file:///d:/01%20-%20Cursos/02%20-%20DIO/15%20-%20BOOTCAMP%20NEO4J/01%20-%20Desafios/desafio_01/arrows_brazil_films.json)
