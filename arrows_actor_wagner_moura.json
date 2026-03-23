@@ -1,0 +1,16 @@
+{
+  "name": "Actor Focus - Wagner Moura",
+  "nodes": [
+    { "id": "A11", "labels": ["Actor"], "caption": "Wagner Moura", "properties": {} },
+    { "id": "M8", "labels": ["Movie"], "caption": "Elite Squad", "properties": {"year": 2007} },
+    { "id": "D10", "labels": ["Director"], "caption": "José Padilha", "properties": {} },
+    { "id": "G1", "labels": ["Genre"], "caption": "Action", "properties": {} },
+    { "id": "G3", "labels": ["Genre"], "caption": "Crime", "properties": {} }
+  ],
+  "relationships": [
+    { "id": "r1", "type": "ACTED_IN", "fromId": "A11", "toId": "M8", "properties": {} },
+    { "id": "r2", "type": "DIRECTED", "fromId": "D10", "toId": "M8", "properties": {} },
+    { "id": "r3", "type": "IN_GENRE", "fromId": "M8", "toId": "G1", "properties": {} },
+    { "id": "r4", "type": "IN_GENRE", "fromId": "M8", "toId": "G3", "properties": {} }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Model Overview",
+  "nodes": [
+    { "id": "User", "labels": ["User"], "caption": "User", "properties": {} },
+    { "id": "Movie", "labels": ["Movie"], "caption": "Movie", "properties": {} },
+    { "id": "Series", "labels": ["Series"], "caption": "Series", "properties": {} },
+    { "id": "Genre", "labels": ["Genre"], "caption": "Genre", "properties": {} },
+    { "id": "Actor", "labels": ["Actor"], "caption": "Actor", "properties": {} },
+    { "id": "Director", "labels": ["Director"], "caption": "Director", "properties": {} }
+  ],
+  "relationships": [
+    { "id": "r1", "type": "WATCHED", "fromId": "User", "toId": "Movie", "properties": { "rating": "Number" } },
+    { "id": "r2", "type": "WATCHED", "fromId": "User", "toId": "Series", "properties": { "rating": "Number" } },
+    { "id": "r3", "type": "ACTED_IN", "fromId": "Actor", "toId": "Movie", "properties": {} },
+    { "id": "r4", "type": "ACTED_IN", "fromId": "Actor", "toId": "Series", "properties": {} },
+    { "id": "r5", "type": "DIRECTED", "fromId": "Director", "toId": "Movie", "properties": {} },
+    { "id": "r6", "type": "DIRECTED", "fromId": "Director", "toId": "Series", "properties": {} },
+    { "id": "r7", "type": "IN_GENRE", "fromId": "Movie", "toId": "Genre", "properties": {} },
+    { "id": "r8", "type": "IN_GENRE", "fromId": "Series", "toId": "Genre", "properties": {} }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Brazilian Films Cluster",
+  "nodes": [
+    { "id": "M7", "labels": ["Movie"], "caption": "City of God", "properties": {"year": 2002} },
+    { "id": "M8", "labels": ["Movie"], "caption": "Elite Squad", "properties": {"year": 2007} },
+    { "id": "M9", "labels": ["Movie"], "caption": "Central Station", "properties": {"year": 1998} },
+    { "id": "M10", "labels": ["Movie"], "caption": "Bacurau", "properties": {"year": 2019} },
+    { "id": "M11", "labels": ["Movie"], "caption": "The Second Mother", "properties": {"year": 2015} },
+    { "id": "M12", "labels": ["Movie"], "caption": "Carandiru", "properties": {"year": 2003} },
+    { "id": "M13", "labels": ["Movie"], "caption": "A Dog's Will", "properties": {"year": 2000} },
+
+    { "id": "A11", "labels": ["Actor"], "caption": "Wagner Moura", "properties": {} },
+    { "id": "A12", "labels": ["Actor"], "caption": "Alice Braga", "properties": {} },
+    { "id": "A13", "labels": ["Actor"], "caption": "Lázaro Ramos", "properties": {} },
+    { "id": "A14", "labels": ["Actor"], "caption": "Fernanda Montenegro", "properties": {} },
+    { "id": "A15", "labels": ["Actor"], "caption": "Sônia Braga", "properties": {} },
+    { "id": "A16", "labels": ["Actor"], "caption": "Selton Mello", "properties": {} },
+    { "id": "A17", "labels": ["Actor"], "caption": "Rodrigo Santoro", "properties": {} },
+
+    { "id": "D9", "labels": ["Director"], "caption": "Fernando Meirelles", "properties": {} },
+    { "id": "D10", "labels": ["Director"], "caption": "José Padilha", "properties": {} },
+    { "id": "D11", "labels": ["Director"], "caption": "Walter Salles", "properties": {} },
+    { "id": "D12", "labels": ["Director"], "caption": "Kleber Mendonça Filho", "properties": {} },
+    { "id": "D13", "labels": ["Director"], "caption": "Anna Muylaert", "properties": {} },
+    { "id": "D14", "labels": ["Director"], "caption": "Hector Babenco", "properties": {} },
+    { "id": "D15", "labels": ["Director"], "caption": "Guel Arraes", "properties": {} },
+
+    { "id": "G1", "labels": ["Genre"], "caption": "Action", "properties": {} },
+    { "id": "G2", "labels": ["Genre"], "caption": "Drama", "properties": {} },
+    { "id": "G3", "labels": ["Genre"], "caption": "Crime", "properties": {} },
+    { "id": "G5", "labels": ["Genre"], "caption": "Fantasy", "properties": {} },
+    { "id": "G6", "labels": ["Genre"], "caption": "Mystery", "properties": {} }
+  ],
+  "relationships": [
+    { "id": "r1", "type": "IN_GENRE", "fromId": "M7", "toId": "G3", "properties": {} },
+    { "id": "r2", "type": "IN_GENRE", "fromId": "M7", "toId": "G2", "properties": {} },
+    { "id": "r3", "type": "IN_GENRE", "fromId": "M8", "toId": "G1", "properties": {} },
+    { "id": "r4", "type": "IN_GENRE", "fromId": "M8", "toId": "G3", "properties": {} },
+    { "id": "r5", "type": "IN_GENRE", "fromId": "M9", "toId": "G2", "properties": {} },
+    { "id": "r6", "type": "IN_GENRE", "fromId": "M10", "toId": "G6", "properties": {} },
+    { "id": "r7", "type": "IN_GENRE", "fromId": "M10", "toId": "G2", "properties": {} },
+    { "id": "r8", "type": "IN_GENRE", "fromId": "M11", "toId": "G2", "properties": {} },
+    { "id": "r9", "type": "IN_GENRE", "fromId": "M12", "toId": "G3", "properties": {} },
+    { "id": "r10", "type": "IN_GENRE", "fromId": "M12", "toId": "G2", "properties": {} },
+    { "id": "r11", "type": "IN_GENRE", "fromId": "M13", "toId": "G5", "properties": {} },
+    { "id": "r12", "type": "IN_GENRE", "fromId": "M13", "toId": "G2", "properties": {} },
+
+    { "id": "r13", "type": "ACTED_IN", "fromId": "A12", "toId": "M7", "properties": {} },
+    { "id": "r14", "type": "ACTED_IN", "fromId": "A11", "toId": "M8", "properties": {} },
+    { "id": "r15", "type": "ACTED_IN", "fromId": "A13", "toId": "M12", "properties": {} },
+    { "id": "r16", "type": "ACTED_IN", "fromId": "A14", "toId": "M9", "properties": {} },
+    { "id": "r17", "type": "ACTED_IN", "fromId": "A15", "toId": "M10", "properties": {} },
+    { "id": "r18", "type": "ACTED_IN", "fromId": "A16", "toId": "M13", "properties": {} },
+    { "id": "r19", "type": "ACTED_IN", "fromId": "A17", "toId": "M12", "properties": {} },
+
+    { "id": "r20", "type": "DIRECTED", "fromId": "D9", "toId": "M7", "properties": {} },
+    { "id": "r21", "type": "DIRECTED", "fromId": "D10", "toId": "M8", "properties": {} },
+    { "id": "r22", "type": "DIRECTED", "fromId": "D11", "toId": "M9", "properties": {} },
+    { "id": "r23", "type": "DIRECTED", "fromId": "D12", "toId": "M10", "properties": {} },
+    { "id": "r24", "type": "DIRECTED", "fromId": "D13", "toId": "M11", "properties": {} },
+    { "id": "r25", "type": "DIRECTED", "fromId": "D14", "toId": "M12", "properties": {} },
+    { "id": "r26", "type": "DIRECTED", "fromId": "D15", "toId": "M13", "properties": {} }
+  ]
+}

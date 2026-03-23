@@ -1,0 +1,21 @@
+{
+  "name": "User U1 Watchlist",
+  "nodes": [
+    { "id": "U1", "labels": ["User"], "caption": "Alice (U1)", "properties": {} },
+    { "id": "S1", "labels": ["Series"], "caption": "Breaking Bad", "properties": {"seasons": 5} },
+    { "id": "M1", "labels": ["Movie"], "caption": "Inception", "properties": {"year": 2010} },
+    { "id": "M7", "labels": ["Movie"], "caption": "City of God", "properties": {"year": 2002} },
+    { "id": "G3", "labels": ["Genre"], "caption": "Crime", "properties": {} },
+    { "id": "G4", "labels": ["Genre"], "caption": "Sci-Fi", "properties": {} },
+    { "id": "G2", "labels": ["Genre"], "caption": "Drama", "properties": {} }
+  ],
+  "relationships": [
+    { "id": "r1", "type": "WATCHED", "fromId": "U1", "toId": "S1", "properties": {"rating": 5.0} },
+    { "id": "r2", "type": "WATCHED", "fromId": "U1", "toId": "M1", "properties": {"rating": 4.5} },
+    { "id": "r3", "type": "WATCHED", "fromId": "U1", "toId": "M7", "properties": {"rating": 4.8} },
+    { "id": "r4", "type": "IN_GENRE", "fromId": "S1", "toId": "G3", "properties": {} },
+    { "id": "r5", "type": "IN_GENRE", "fromId": "M1", "toId": "G4", "properties": {} },
+    { "id": "r6", "type": "IN_GENRE", "fromId": "M7", "toId": "G3", "properties": {} },
+    { "id": "r7", "type": "IN_GENRE", "fromId": "M7", "toId": "G2", "properties": {} }
+  ]
+}
