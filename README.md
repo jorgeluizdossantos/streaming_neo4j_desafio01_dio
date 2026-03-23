@@ -112,13 +112,14 @@ Observação: os arquivos JSON seguem a estrutura de nós e relacionamentos do A
 
 ## Desafios e dificuldades da modelagem
 
-- Delimitar Movie vs. Series: decidir propriedades específicas (duration vs. seasons/startYear) mantendo navegação uniforme.
-- Propriedades em relacionamentos: `rating` em WATCHED modela avaliação por usuário; exige decisões sobre tipo, escala e atualização.
+- Delimitar Movie vs. Series: decidir propriedades específicas (duration vs. seasons/startYear) mantendo navegação uniforme e consistente.
+- Propriedades incluídas em relacionamentos: `rating` em WATCHED modela avaliação por usuário; exige decisões sobre tipo, escala e atualização.
 - Identificadores estáveis: escolher `id` legível e único por label, garantindo idempotência com `MERGE`.
 - Cardinalidade e duplicidades: evitar múltiplos WATCHED para o mesmo par (User, Conteúdo) e normalizar IN_GENRE.
 - Pessoas com múltiplos papéis: um mesmo indivíduo pode atuar e dirigir; aqui separam-se labels Actor e Director, mas em cenários reais pode-se unificar em `Person` com relacionamentos específicos.
 - Catálogo de gêneros: padronização de nomes e possibilidade de hierarquias (ex.: subgêneros) pode exigir um grafo de taxonomia.
 - Evolução do esquema: inclusão de países, idiomas, plataformas e temporadas/episódios amplia a complexidade e o volume de dados.
+- Inserção de dados quando o volume é grande. (No caso de um sistema real, os dados que se referem às interações com usuários são incluídos de forma gradual, mas os dados referentes aos filmes, pelo menos da primeira vez, precisam ser incluídos em lote.)
 
 ## Estrutura do repositório
 - `visualisation.png` — Visualização do modelo de grafo.
