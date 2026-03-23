@@ -1,21 +1,22 @@
 {
   "name": "Model Overview",
   "nodes": [
-    { "id": "User", "labels": ["User"], "caption": {"text":"User"}, "properties": {}, "position": {"x": 0, "y": 0}, "style": {} },
-    { "id": "Movie", "labels": ["Movie"], "caption": {"text":"Movie"}, "properties": {}, "position": {"x": 200, "y": -120}, "style": {} },
-    { "id": "Series", "labels": ["Series"], "caption": {"text":"Series"}, "properties": {}, "position": {"x": 200, "y": 120}, "style": {} },
-    { "id": "Genre", "labels": ["Genre"], "caption": {"text":"Genre"}, "properties": {}, "position": {"x": 420, "y": 0}, "style": {} },
-    { "id": "Actor", "labels": ["Actor"], "caption": {"text":"Actor"}, "properties": {}, "position": {"x": 200, "y": -260}, "style": {} },
-    { "id": "Director", "labels": ["Director"], "caption": {"text":"Director"}, "properties": {}, "position": {"x": 200, "y": 260}, "style": {} }
+    { "id": "User", "labels": ["User"], "caption": "User", "properties": {}, "position": {"x": 0, "y": 0}, "style": {} },
+    { "id": "Movie", "labels": ["Movie"], "caption": "Movie", "properties": {}, "position": {"x": 200, "y": -120}, "style": {} },
+    { "id": "Series", "labels": ["Series"], "caption": "Series", "properties": {}, "position": {"x": 200, "y": 120}, "style": {} },
+    { "id": "Genre", "labels": ["Genre"], "caption": "Genre", "properties": {}, "position": {"x": 420, "y": 0}, "style": {} },
+    { "id": "Actor", "labels": ["Actor"], "caption": "Actor", "properties": {}, "position": {"x": 200, "y": -260}, "style": {} },
+    { "id": "Director", "labels": ["Director"], "caption": "Director", "properties": {}, "position": {"x": 200, "y": 260}, "style": {} }
   ],
   "relationships": [
-    { "id": "r1", "type": "WATCHED", "fromId": "User", "toId": "Movie", "properties": { "rating": "Number" }, "caption": {"text":"WATCHED"}, "style": {} },
-    { "id": "r2", "type": "WATCHED", "fromId": "User", "toId": "Series", "properties": { "rating": "Number" }, "caption": {"text":"WATCHED"}, "style": {} },
-    { "id": "r3", "type": "ACTED_IN", "fromId": "Actor", "toId": "Movie", "properties": {}, "caption": {"text":"ACTED_IN"}, "style": {} },
-    { "id": "r4", "type": "ACTED_IN", "fromId": "Actor", "toId": "Series", "properties": {}, "caption": {"text":"ACTED_IN"}, "style": {} },
-    { "id": "r5", "type": "DIRECTED", "fromId": "Director", "toId": "Movie", "properties": {}, "caption": {"text":"DIRECTED"}, "style": {} },
-    { "id": "r6", "type": "DIRECTED", "fromId": "Director", "toId": "Series", "properties": {}, "caption": {"text":"DIRECTED"}, "style": {} },
-    { "id": "r7", "type": "IN_GENRE", "fromId": "Movie", "toId": "Genre", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} },
-    { "id": "r8", "type": "IN_GENRE", "fromId": "Series", "toId": "Genre", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} }
-  ]
+    { "id": "r1", "type": "WATCHED", "fromId": "User", "toId": "Movie", "properties": { "rating": "Number" }, "style": {} },
+    { "id": "r2", "type": "WATCHED", "fromId": "User", "toId": "Series", "properties": { "rating": "Number" }, "style": {} },
+    { "id": "r3", "type": "ACTED_IN", "fromId": "Actor", "toId": "Movie", "properties": {}, "style": {} },
+    { "id": "r4", "type": "ACTED_IN", "fromId": "Actor", "toId": "Series", "properties": {}, "style": {} },
+    { "id": "r5", "type": "DIRECTED", "fromId": "Director", "toId": "Movie", "properties": {}, "style": {} },
+    { "id": "r6", "type": "DIRECTED", "fromId": "Director", "toId": "Series", "properties": {}, "style": {} },
+    { "id": "r7", "type": "IN_GENRE", "fromId": "Movie", "toId": "Genre", "properties": {}, "style": {} },
+    { "id": "r8", "type": "IN_GENRE", "fromId": "Series", "toId": "Genre", "properties": {}, "style": {} }
+  ],
+  "style": {}
 }
