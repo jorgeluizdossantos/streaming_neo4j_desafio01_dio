@@ -149,6 +149,25 @@ OPTIONAL MATCH (d:Director)-[:DIRECTED]->(m)
 RETURN m, g, a, d;
 ```
 
+Imagem gerada:
+
+![Filmes do Brasil](filmes_brasil.png)
+
+Cypher demonstrativo equivalente:
+
+```cypher
+CREATE (:Actor)-[:ACTED_IN]->(`Central Station`:Movie {year: 1998})-[:IN_GENRE]->(Drama:Genre)<-[:IN_GENRE]-(`City of God`:Movie {year: 2002})-[:IN_GENRE]->(Crime:Genre)<-[:IN_GENRE]-(`Elite Squad`:Movie {year: 2007})<-[:ACTED_IN]-(:Actor),
+(:Director)-[:DIRECTED]->(`Elite Squad`)-[:IN_GENRE]->(:Genre),
+(:Director)-[:DIRECTED]->(:Movie {year: 2015})-[:IN_GENRE]->(Drama)<-[:IN_GENRE]-(Bacurau:Movie {year: 2019})-[:IN_GENRE]->(:Genre),
+(:Actor)-[:ACTED_IN]->(`A Dog's Will`:Movie {year: 2000})-[:IN_GENRE]->(Drama)<-[:IN_GENRE]-(Carandiru:Movie {year: 2003})-[:IN_GENRE]->(Crime),
+(:Director)-[:DIRECTED]->(`A Dog's Will`)-[:IN_GENRE]->(:Genre),
+(:Actor)-[:ACTED_IN]->(`City of God`)<-[:DIRECTED]-(:Director),
+(:Actor)-[:ACTED_IN]->(Carandiru)<-[:ACTED_IN]-(:Actor),
+(:Actor)-[:ACTED_IN]->(Bacurau)<-[:DIRECTED]-(:Director),
+(:Director)-[:DIRECTED]->(`Central Station`),
+(:Director)-[:DIRECTED]->(Carandiru);
+```
+
 - Diagramas prontos para Arrows.app (importar via “Open → Import JSON”):
   - Modelo conceitual: [arrows_model_overview.json](file:///d:/01%20-%20Cursos/02%20-%20DIO/15%20-%20BOOTCAMP%20NEO4J/01%20-%20Desafios/desafio_01/arrows_model_overview.json)
   - Cluster cinema brasileiro: [arrows_brazil_films.json](file:///d:/01%20-%20Cursos/02%20-%20DIO/15%20-%20BOOTCAMP%20NEO4J/01%20-%20Desafios/desafio_01/arrows_brazil_films.json)
