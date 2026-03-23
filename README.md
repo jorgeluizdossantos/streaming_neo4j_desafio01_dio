@@ -112,6 +112,27 @@ MATCH (d:Director)-[:DIRECTED]->(c) RETURN d.name, labels(c)[0] AS tipo, c.title
   - Explore
     - Carregue o resultado e use o exportador de imagem.
 
+### Evidência — Elite Squad (conecta com “filmes brasileiros, elencos e diretores” e “gêneros por ator”)
+
+![Elite Squad](dio_desafio_01.png)
+
+Consultas para gerar a visualização:
+
+```cypher
+// Subgrafo: atores, diretor e gêneros do filme Elite Squad
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie {title: 'Elite Squad'})<-[:DIRECTED]-(d:Director)
+OPTIONAL MATCH (m)-[:IN_GENRE]->(g:Genre)
+RETURN a, m, d, g;
+```
+
+```cypher
+// Elenco e diretor do filme Elite Squad
+MATCH (m:Movie {title: 'Elite Squad'})
+OPTIONAL MATCH (m)<-[:ACTED_IN]-(a:Actor)
+OPTIONAL MATCH (m)<-[:DIRECTED]-(d:Director)
+RETURN m.title AS movie, collect(DISTINCT a.name) AS cast, collect(DISTINCT d.name) AS directors;
+```
+
 - Diagramas prontos para Arrows.app (importar via “Open → Import JSON”):
   - Modelo conceitual: [arrows_model_overview.json](file:///d:/01%20-%20Cursos/02%20-%20DIO/15%20-%20BOOTCAMP%20NEO4J/01%20-%20Desafios/desafio_01/arrows_model_overview.json)
   - Cluster cinema brasileiro: [arrows_brazil_films.json](file:///d:/01%20-%20Cursos/02%20-%20DIO/15%20-%20BOOTCAMP%20NEO4J/01%20-%20Desafios/desafio_01/arrows_brazil_films.json)
