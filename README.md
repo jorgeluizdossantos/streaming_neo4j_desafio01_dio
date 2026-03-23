@@ -4,14 +4,14 @@ Este repositório contém a solução do desafio de modelagem do Bootcamp Neo4j 
 
 ## Contexto
 
-Serviços de streaming dependem de relacionamentos ricos: usuários assistem títulos, atores participam de produções, diretores comandam títulos, e obras pertencem a gêneros. Responder perguntas de navegação (“quais filmes com este diretor e este ator?”, “o que pessoas parecidas assistiram?”) exige atravessar conexões profundas e diversas.
+Serviços de streaming dependem de relacionamentos ricos: usuários assistem títulos, atores participam de produções, diretores comandam títulos, e obras pertencem a gêneros. Responder perguntas de navegação (“quais filmes com este diretor e este ator?”, “o que pessoas parecidas assistiram?”) exige a construção de conexões mais complexas e diversas.
 
 ### Requisitos do desafio
 - Nós: User, Movie, Series, Genre, Actor, Director.
 - Relacionamentos: WATCHED (com propriedade `rating`), ACTED_IN, DIRECTED, IN_GENRE.
 - Entregas: diagrama do grafo e script `.cypher` com constraints e pelo menos 10 usuários, 10 filmes/séries e seus relacionamentos.
 
-## Por que grafos (Neo4j)?
+## Por que utilizar grafos (Neo4j)?
 - Modelam naturalmente redes ricas e heterogêneas, evitando junções custosas em consultas multi-hop.
 - Esquema flexível para evoluir o domínio (novas propriedades/labels sem migrações pesadas).
 - Cypher expressa consultas de caminho de forma concisa e legível.
