@@ -39,6 +39,17 @@ Abaixo, a visualização do modelo de grafo:
 
 ![Visualização do grafo](visualisation.png)
 
+### Exemplo — Elite Squad
+
+![Elite Squad](dio_desafio_01.png)
+
+Cypher correspondente:
+
+```cypher
+CREATE (:Actor)-[:ACTED_IN]->(`Elite Squad`:Movie {year: 2007})<-[:DIRECTED]-(:Director),
+(:Genre)<-[:IN_GENRE]-(`Elite Squad`)-[:IN_GENRE]->(:Genre)
+```
+
 ## Como executar
 
 ### Pré-requisitos
