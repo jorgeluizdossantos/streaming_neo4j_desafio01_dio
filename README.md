@@ -35,29 +35,9 @@ Serviços de streaming dependem de relacionamentos ricos: usuários assistem tí
 
 ## Diagrama do Grafo
 
-O esboço em Mermaid está em `modelo_grafo_streaming.mmd`. Prévia do modelo:
+Abaixo, a visualização do modelo de grafo:
 
-```mermaid
-graph TD
-    User[User]
-    Movie[Movie]
-    Series[Series]
-    Genre[Genre]
-    Actor[Actor]
-    Director[Director]
-
-    User -- "WATCHED (rating)" --> Movie
-    User -- "WATCHED (rating)" --> Series
-
-    Actor -- "ACTED_IN" --> Movie
-    Actor -- "ACTED_IN" --> Series
-
-    Director -- "DIRECTED" --> Movie
-    Director -- "DIRECTED" --> Series
-
-    Movie -- "IN_GENRE" --> Genre
-    Series -- "IN_GENRE" --> Genre
-```
+![Visualização do grafo](visualisation.png)
 
 ## Como executar
 
@@ -141,7 +121,6 @@ Observação: os arquivos JSON seguem a estrutura de nós e relacionamentos do A
 - Evolução do esquema: inclusão de países, idiomas, plataformas e temporadas/episódios amplia a complexidade e o volume de dados.
 
 ## Estrutura do repositório
-- `modelo_grafo_streaming.mmd` — Diagrama Mermaid do modelo.
+- `visualisation.png` — Visualização do modelo de grafo.
 - `desafio_01.cypher` — Script de constraints e carga de dados (internacionais e brasileiros).
 - `README.md` — Este guia.
-

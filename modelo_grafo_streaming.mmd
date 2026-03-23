@@ -1,0 +1,19 @@
+graph TD
+    User[User]
+    Movie[Movie]
+    Series[Series]
+    Genre[Genre]
+    Actor[Actor]
+    Director[Director]
+
+    User -- "WATCHED (rating)" --> Movie
+    User -- "WATCHED (rating)" --> Series
+
+    Actor -- "ACTED_IN" --> Movie
+    Actor -- "ACTED_IN" --> Series
+
+    Director -- "DIRECTED" --> Movie
+    Director -- "DIRECTED" --> Series
+
+    Movie -- "IN_GENRE" --> Genre
+    Series -- "IN_GENRE" --> Genre
