@@ -1,16 +1,16 @@
 {
   "name": "Actor Focus - Wagner Moura",
   "nodes": [
-    { "id": "A11", "labels": ["Actor"], "caption": "Wagner Moura", "properties": {} },
-    { "id": "M8", "labels": ["Movie"], "caption": "Elite Squad", "properties": {"year": 2007} },
-    { "id": "D10", "labels": ["Director"], "caption": "José Padilha", "properties": {} },
-    { "id": "G1", "labels": ["Genre"], "caption": "Action", "properties": {} },
-    { "id": "G3", "labels": ["Genre"], "caption": "Crime", "properties": {} }
+    { "id": "A11", "labels": ["Actor"], "caption": {"text":"Wagner Moura"}, "properties": {}, "position": {"x": 0, "y": 0}, "style": {} },
+    { "id": "M8", "labels": ["Movie"], "caption": {"text":"Elite Squad"}, "properties": {"year": 2007}, "position": {"x": 220, "y": 0}, "style": {} },
+    { "id": "D10", "labels": ["Director"], "caption": {"text":"José Padilha"}, "properties": {}, "position": {"x": 220, "y": -140}, "style": {} },
+    { "id": "G1", "labels": ["Genre"], "caption": {"text":"Action"}, "properties": {}, "position": {"x": 440, "y": 0}, "style": {} },
+    { "id": "G3", "labels": ["Genre"], "caption": {"text":"Crime"}, "properties": {}, "position": {"x": 440, "y": 140}, "style": {} }
   ],
   "relationships": [
-    { "id": "r1", "type": "ACTED_IN", "fromId": "A11", "toId": "M8", "properties": {} },
-    { "id": "r2", "type": "DIRECTED", "fromId": "D10", "toId": "M8", "properties": {} },
-    { "id": "r3", "type": "IN_GENRE", "fromId": "M8", "toId": "G1", "properties": {} },
-    { "id": "r4", "type": "IN_GENRE", "fromId": "M8", "toId": "G3", "properties": {} }
+    { "id": "r1", "type": "ACTED_IN", "fromId": "A11", "toId": "M8", "properties": {}, "caption": {"text":"ACTED_IN"}, "style": {} },
+    { "id": "r2", "type": "DIRECTED", "fromId": "D10", "toId": "M8", "properties": {}, "caption": {"text":"DIRECTED"}, "style": {} },
+    { "id": "r3", "type": "IN_GENRE", "fromId": "M8", "toId": "G1", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} },
+    { "id": "r4", "type": "IN_GENRE", "fromId": "M8", "toId": "G3", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} }
   ]
 }

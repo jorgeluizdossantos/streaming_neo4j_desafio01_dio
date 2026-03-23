@@ -1,21 +1,21 @@
 {
   "name": "User U1 Watchlist",
   "nodes": [
-    { "id": "U1", "labels": ["User"], "caption": "Alice (U1)", "properties": {} },
-    { "id": "S1", "labels": ["Series"], "caption": "Breaking Bad", "properties": {"seasons": 5} },
-    { "id": "M1", "labels": ["Movie"], "caption": "Inception", "properties": {"year": 2010} },
-    { "id": "M7", "labels": ["Movie"], "caption": "City of God", "properties": {"year": 2002} },
-    { "id": "G3", "labels": ["Genre"], "caption": "Crime", "properties": {} },
-    { "id": "G4", "labels": ["Genre"], "caption": "Sci-Fi", "properties": {} },
-    { "id": "G2", "labels": ["Genre"], "caption": "Drama", "properties": {} }
+    { "id": "U1", "labels": ["User"], "caption": {"text":"Alice (U1)"}, "properties": {}, "position": {"x": 0, "y": 0}, "style": {} },
+    { "id": "S1", "labels": ["Series"], "caption": {"text":"Breaking Bad"}, "properties": {"seasons": 5}, "position": {"x": 220, "y": -140}, "style": {} },
+    { "id": "M1", "labels": ["Movie"], "caption": {"text":"Inception"}, "properties": {"year": 2010}, "position": {"x": 220, "y": 0}, "style": {} },
+    { "id": "M7", "labels": ["Movie"], "caption": {"text":"City of God"}, "properties": {"year": 2002}, "position": {"x": 220, "y": 140}, "style": {} },
+    { "id": "G3", "labels": ["Genre"], "caption": {"text":"Crime"}, "properties": {}, "position": {"x": 440, "y": -140}, "style": {} },
+    { "id": "G4", "labels": ["Genre"], "caption": {"text":"Sci-Fi"}, "properties": {}, "position": {"x": 440, "y": 0}, "style": {} },
+    { "id": "G2", "labels": ["Genre"], "caption": {"text":"Drama"}, "properties": {}, "position": {"x": 440, "y": 140}, "style": {} }
   ],
   "relationships": [
-    { "id": "r1", "type": "WATCHED", "fromId": "U1", "toId": "S1", "properties": {"rating": 5.0} },
-    { "id": "r2", "type": "WATCHED", "fromId": "U1", "toId": "M1", "properties": {"rating": 4.5} },
-    { "id": "r3", "type": "WATCHED", "fromId": "U1", "toId": "M7", "properties": {"rating": 4.8} },
-    { "id": "r4", "type": "IN_GENRE", "fromId": "S1", "toId": "G3", "properties": {} },
-    { "id": "r5", "type": "IN_GENRE", "fromId": "M1", "toId": "G4", "properties": {} },
-    { "id": "r6", "type": "IN_GENRE", "fromId": "M7", "toId": "G3", "properties": {} },
-    { "id": "r7", "type": "IN_GENRE", "fromId": "M7", "toId": "G2", "properties": {} }
+    { "id": "r1", "type": "WATCHED", "fromId": "U1", "toId": "S1", "properties": {"rating": 5.0}, "caption": {"text":"WATCHED"}, "style": {} },
+    { "id": "r2", "type": "WATCHED", "fromId": "U1", "toId": "M1", "properties": {"rating": 4.5}, "caption": {"text":"WATCHED"}, "style": {} },
+    { "id": "r3", "type": "WATCHED", "fromId": "U1", "toId": "M7", "properties": {"rating": 4.8}, "caption": {"text":"WATCHED"}, "style": {} },
+    { "id": "r4", "type": "IN_GENRE", "fromId": "S1", "toId": "G3", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} },
+    { "id": "r5", "type": "IN_GENRE", "fromId": "M1", "toId": "G4", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} },
+    { "id": "r6", "type": "IN_GENRE", "fromId": "M7", "toId": "G3", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} },
+    { "id": "r7", "type": "IN_GENRE", "fromId": "M7", "toId": "G2", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} }
   ]
 }

@@ -1,22 +1,22 @@
 {
   "name": "Genre Focus - Drama",
   "nodes": [
-    { "id": "G2", "labels": ["Genre"], "caption": "Drama", "properties": {} },
-    { "id": "M4", "labels": ["Movie"], "caption": "The Godfather", "properties": {"year": 1972} },
-    { "id": "M3", "labels": ["Movie"], "caption": "Parasite", "properties": {"year": 2019} },
-    { "id": "M7", "labels": ["Movie"], "caption": "City of God", "properties": {"year": 2002} },
-    { "id": "M9", "labels": ["Movie"], "caption": "Central Station", "properties": {"year": 1998} },
-    { "id": "M10", "labels": ["Movie"], "caption": "Bacurau", "properties": {"year": 2019} },
-    { "id": "M11", "labels": ["Movie"], "caption": "The Second Mother", "properties": {"year": 2015} },
-    { "id": "S4", "labels": ["Series"], "caption": "The Crown", "properties": {"seasons": 6} }
+    { "id": "G2", "labels": ["Genre"], "caption": {"text":"Drama"}, "properties": {}, "position": {"x": 0, "y": 0}, "style": {} },
+    { "id": "M4", "labels": ["Movie"], "caption": {"text":"The Godfather"}, "properties": {"year": 1972}, "position": {"x": 220, "y": -210}, "style": {} },
+    { "id": "M3", "labels": ["Movie"], "caption": {"text":"Parasite"}, "properties": {"year": 2019}, "position": {"x": 220, "y": -105}, "style": {} },
+    { "id": "M7", "labels": ["Movie"], "caption": {"text":"City of God"}, "properties": {"year": 2002}, "position": {"x": 220, "y": 0}, "style": {} },
+    { "id": "M9", "labels": ["Movie"], "caption": {"text":"Central Station"}, "properties": {"year": 1998}, "position": {"x": 220, "y": 105}, "style": {} },
+    { "id": "M10", "labels": ["Movie"], "caption": {"text":"Bacurau"}, "properties": {"year": 2019}, "position": {"x": 220, "y": 210}, "style": {} },
+    { "id": "M11", "labels": ["Movie"], "caption": {"text":"The Second Mother"}, "properties": {"year": 2015}, "position": {"x": 220, "y": 315}, "style": {} },
+    { "id": "S4", "labels": ["Series"], "caption": {"text":"The Crown"}, "properties": {"seasons": 6}, "position": {"x": 220, "y": 420}, "style": {} }
   ],
   "relationships": [
-    { "id": "r1", "type": "IN_GENRE", "fromId": "M4", "toId": "G2", "properties": {} },
-    { "id": "r2", "type": "IN_GENRE", "fromId": "M3", "toId": "G2", "properties": {} },
-    { "id": "r3", "type": "IN_GENRE", "fromId": "M7", "toId": "G2", "properties": {} },
-    { "id": "r4", "type": "IN_GENRE", "fromId": "M9", "toId": "G2", "properties": {} },
-    { "id": "r5", "type": "IN_GENRE", "fromId": "M10", "toId": "G2", "properties": {} },
-    { "id": "r6", "type": "IN_GENRE", "fromId": "M11", "toId": "G2", "properties": {} },
-    { "id": "r7", "type": "IN_GENRE", "fromId": "S4", "toId": "G2", "properties": {} }
+    { "id": "r1", "type": "IN_GENRE", "fromId": "M4", "toId": "G2", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} },
+    { "id": "r2", "type": "IN_GENRE", "fromId": "M3", "toId": "G2", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} },
+    { "id": "r3", "type": "IN_GENRE", "fromId": "M7", "toId": "G2", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} },
+    { "id": "r4", "type": "IN_GENRE", "fromId": "M9", "toId": "G2", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} },
+    { "id": "r5", "type": "IN_GENRE", "fromId": "M10", "toId": "G2", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} },
+    { "id": "r6", "type": "IN_GENRE", "fromId": "M11", "toId": "G2", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} },
+    { "id": "r7", "type": "IN_GENRE", "fromId": "S4", "toId": "G2", "properties": {}, "caption": {"text":"IN_GENRE"}, "style": {} }
   ]
 }
